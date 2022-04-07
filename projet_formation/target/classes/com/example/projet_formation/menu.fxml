@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: EDF4FF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet_formation.MenuController">
+    <children>
+        <Button fx:id="btn_etudiants" layoutX="230.0" layoutY="100.0" mnemonicParsing="false" onAction="#switchToEtudiants" prefHeight="34.0" prefWidth="196.0" style="-fx-background-color: #2E3E65;" text="Etudiants" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font></Button>
+        <Label layoutX="159.0" layoutY="33.0" text="Bienvenue sur le suivi formation" textAlignment="CENTER" textFill="#2e3e65">
+            <font>
+                <Font name="Century Gothic" size="20.0" />
+            </font></Label>
+        <Button fx:id="btn_mentions" layoutX="230.0" layoutY="155.0" mnemonicParsing="false" onAction="#switchToMentions" prefHeight="34.0" prefWidth="196.0" style="-fx-background-color: #2E3E65;" text="Mentions" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font></Button>
+        <Button fx:id="btn_parcours" layoutX="230.0" layoutY="210.0" mnemonicParsing="false" onAction="#switchToParcours" prefHeight="34.0" prefWidth="196.0" style="-fx-background-color: #2E3E65;" text="Parcours" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font></Button>
+        <Button fx:id="btn_UE" layoutX="230.0" layoutY="265.0" mnemonicParsing="false" onAction="#switchToUEs" prefHeight="34.0" prefWidth="196.0" style="-fx-background-color: #2E3E65;" text="Unités d'enseignements" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font></Button>
+        <Circle fill="#2e3e65" layoutX="190.0" layoutY="117.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="177.0" layoutY="104.0" onMouseClicked="#switchToEtudiants" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/student.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#2e3e65" layoutX="190.0" layoutY="172.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="177.0" layoutY="159.0" onMouseClicked="#switchToMentions" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/diploma.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#2e3e65" layoutX="190.0" layoutY="227.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="177.0" layoutY="214.0" onMouseClicked="#switchToParcours" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/board.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#2e3e65" layoutX="190.0" layoutY="282.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="177.0" layoutY="269.0" onMouseClicked="#switchToUEs" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/book.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

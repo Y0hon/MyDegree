@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="450.0" prefWidth="850.0" style="-fx-background-color: EDF4FF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet_formation.UEsController">
+    <children>
+        <Label fx:id="lbl_ues" layoutX="335.0" layoutY="31.0" text="Unités d'enseignements" textFill="#2e3e65">
+            <font>
+                <Font name="Century Gothic" size="20.0" />
+            </font>
+        </Label>
+        <Circle fill="#2e3e65" layoutX="53.0" layoutY="44.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+        <ImageView fx:id="img_back" fitHeight="26.0" fitWidth="26.0" layoutX="40.0" layoutY="31.0" onMouseClicked="#switchToMenu" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/back.png" />
+            </image>
+        </ImageView>
+        <TableView fx:id="tableUEs" layoutX="53.0" layoutY="112.0" onMouseClicked="#clickItemUEs" prefHeight="294.0" prefWidth="354.0">
+            <columns>
+                <TableColumn id="colID" fx:id="colID_UEs" prefWidth="65.60000991821289" text="ID" />
+                <TableColumn id="colLib" fx:id="colLib_UEs" prefWidth="214.3999786376953" text="Libelle" />
+            <TableColumn fx:id="colECTS_UEs" prefWidth="72.79998779296875" text="ECTS" />
+            </columns>
+        </TableView>
+        <TextField fx:id="tbx_filtre_ues" layoutX="220.0" layoutY="75.0" prefHeight="26.0" prefWidth="150.0" />
+        <BorderPane layoutX="452.0" layoutY="75.0" prefHeight="330.0" prefWidth="354.0" style="-fx-background-color: #EEE9E9;" AnchorPane.topAnchor="75.0">
+            <top>
+                <Label fx:id="lbl_parcours_ue" text="Prérequis UE" textFill="#2e3e65" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="Century Gothic" size="18.0" />
+                    </font>
+                    <BorderPane.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </BorderPane.margin>
+                </Label>
+            </top>
+            <center>
+                <TableView fx:id="tablePrerequisUE" prefHeight="286.0" prefWidth="338.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="colID_prerequisUE" prefWidth="77.5999755859375" text="ID" />
+                        <TableColumn fx:id="colLib_prerequisUE" prefWidth="185.60000610351562" text="Libelle" />
+                        <TableColumn fx:id="colECTS_prerequisUE" prefWidth="81.5999755859375" text="ECTS" />
+                    </columns>
+                </TableView>
+            </center>
+        </BorderPane>
+        <Circle fill="#2e3e65" layoutX="303.0" layoutY="44.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="290.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/book.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

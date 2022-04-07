@@ -1,0 +1,10 @@
+"INFO-1","Informatique","Miage","LOGI2","INFO5","GEST3","PROG4"
+"INFO-2","Informatique","DIFS","INFO2","INFO3","INFO4"
+"ELEC-1","Electronique","Electronique fondamentale",ELEC1,ELEC2
+"ELEC-2","Electronique","Ingenierie pour la sante",ELEC2,ELEC3
+"MATHS-1","Mathematiques","Mathematiques fondamentales",MATH1,MATH2
+"MATHS-2","Mathematiques","Mathematiques appliquees",MATH2,MATH3
+"PHYS-1","Physique","Physique quantique",PHYS3,PHYS4
+"PHYS-2","Physique","Physique pour l'enseignement",MATHAPP1,MATHAPP2,PHYS1
+"CHIM-1","Chimie","Chimie organique",CHIM2,CHIM3
+"CHIM-2","Chimie","Chimie pour l'enseignement",CHIM1

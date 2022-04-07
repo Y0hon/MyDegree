@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="450.0" prefWidth="660.0" style="-fx-background-color: EDF4FF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet_formation.MentionsController">
+   <children>
+      <Label fx:id="lbl_mentions" layoutX="286.0" layoutY="31.0" text="Mentions" textFill="#2e3e65">
+         <font>
+            <Font name="Century Gothic" size="20.0" />
+         </font>
+      </Label>
+      <Circle fill="#2e3e65" layoutX="53.0" layoutY="44.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fx:id="img_back" fitHeight="26.0" fitWidth="26.0" layoutX="40.0" layoutY="31.0" onMouseClicked="#switchToMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/back.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableMentions" layoutX="53.0" layoutY="112.0" onMouseClicked="#clickItemMention" prefHeight="293.0" prefWidth="268.0">
+        <columns>
+          <TableColumn id="colID" fx:id="colID" prefWidth="84.79999160766602" text="ID" />
+          <TableColumn id="colLib" fx:id="colLib" prefWidth="182.40000915527344" text="Libelle" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tbx_filtre" layoutX="172.0" layoutY="75.0" prefHeight="26.0" prefWidth="150.0" />
+      <BorderPane layoutX="362.0" layoutY="75.0" prefHeight="330.0" prefWidth="246.0" style="-fx-background-color: #EEE9E9;" AnchorPane.topAnchor="75.0">
+         <top>
+            <Label fx:id="lbl_mentions1" text="Liste parcours" textFill="#2e3e65" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+         <center>
+            <TableView fx:id="tableParcours" onMouseClicked="#switchToParcours" prefHeight="293.0" prefWidth="268.0" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="colID_parcours" prefWidth="84.79999160766602" text="ID" />
+                  <TableColumn fx:id="colLib_parcours" prefWidth="182.40000915527344" text="Libelle" />
+               </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+      <Circle fill="#2e3e65" layoutX="256.0" layoutY="44.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="243.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/diploma.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#2e3e65" layoutX="560.0" layoutY="44.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="547.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/refresh.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

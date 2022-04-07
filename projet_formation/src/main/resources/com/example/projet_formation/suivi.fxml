@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #C4DFF0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet_formation.SuiviController">
+   <center>
+      <SplitPane dividerPositions="0.6413624220837043" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <items>
+            <GridPane prefHeight="206.0" prefWidth="602.0" style="-fx-background-color: #EDF4FF;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="237.59996032714844" minHeight="10.0" percentHeight="10.0" prefHeight="146.79998779296875" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="454.60002517700195" minHeight="10.0" percentHeight="100.0" prefHeight="399.20001220703125" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="tableUEEnCours" prefHeight="369.0" prefWidth="150.0" style="-fx-background-color: #756D6D;" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="colIDEnCours" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="colLibEnCours" prefWidth="75.0" text="Libellé" />
+                        <TableColumn fx:id="colECTEnCours" prefWidth="75.0" text="ECT" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </GridPane.margin>
+                  </TableView>
+                  <TableView fx:id="tableUEEffectuees" prefHeight="369.0" prefWidth="202.0" style="-fx-background-color: #756D6D;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="colIDEffectuees" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="colLibEffectuees" prefWidth="75.0" text="Libellé" />
+                        <TableColumn fx:id="colECTEffectuees" prefWidth="75.0" text="ECT" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </GridPane.margin>
+                  </TableView>
+                  <TableView fx:id="tableUEAVenir" prefHeight="369.0" prefWidth="150.0" style="-fx-background-color: #756D6D;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="colIDAVenir" prefWidth="75.0" text="Ordre" />
+                        <TableColumn fx:id="colLibAVenir" prefWidth="75.0" text="Libellé" />
+                        <TableColumn fx:id="colECTAVenir" prefWidth="75.0" text="ECT" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="9.0" />
+                     </GridPane.margin>
+                  </TableView>
+                  <Label text="UE en cours" textFill="#2e3e65" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="UE effectuées" textFill="#2e3e65" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="UE à venir" textFill="#2e3e65" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EDF4FF;">
+               <center>
+                  <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="L’étudiant peut valider son parcours avec un nombre minimum de semestres égale à : " textFill="#2e3e65" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets top="25.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="txt_mimimum" editable="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="125.0" right="125.0" />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                  </GridPane>
+               </center>
+            </BorderPane>
+         </items>
+      </SplitPane>
+   </center>
+   <top>
+      <BorderPane prefHeight="53.0" prefWidth="900.0" style="-fx-background-color: #EDF4FF;" BorderPane.alignment="CENTER">
+         <center>
+            <Label text="Suivi UE étudiants" fx:id="Titre" textFill="#2e3e65" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Label>
+         </center>
+      </BorderPane>
+   </top>
+</BorderPane>
